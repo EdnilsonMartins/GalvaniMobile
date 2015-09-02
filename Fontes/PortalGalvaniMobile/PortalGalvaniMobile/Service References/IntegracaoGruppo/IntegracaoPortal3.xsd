@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DTO.Menu" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DTO.Menu" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="ListaMenuResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Menus" nillable="true" type="tns:ArrayOfMenu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListaMenuResponse" nillable="true" type="tns:ListaMenuResponse" />
+  <xs:complexType name="ArrayOfMenu">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Menu" nillable="true" type="tns:Menu" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfMenu" nillable="true" type="tns:ArrayOfMenu" />
+  <xs:complexType name="Menu">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Complemento" nillable="true" type="tns:Menu.MenuComplemento" />
+      <xs:element minOccurs="0" name="Detalhe" nillable="true" type="tns:MenuIdiomaExcecao" />
+      <xs:element minOccurs="0" name="IconClass" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ImageURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LinkURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="MenuId" type="xs:int" />
+      <xs:element minOccurs="0" name="MenuPaiId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MenuTipoAcaoId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="MenuTipoId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Posicao" type="xs:int" />
+      <xs:element minOccurs="0" name="PublicacaoId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Rotulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiteId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="TargetId" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Menu" nillable="true" type="tns:Menu" />
+  <xs:complexType name="Menu.MenuComplemento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ListaUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListaUsuarioGrupo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Privado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Menu.MenuComplemento" nillable="true" type="tns:Menu.MenuComplemento" />
+  <xs:complexType name="MenuIdiomaExcecao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IdiomaId" type="xs:int" />
+      <xs:element minOccurs="0" name="MenuId" type="xs:int" />
+      <xs:element minOccurs="0" name="MenuIdiomaExcecaoId" type="xs:int" />
+      <xs:element minOccurs="0" name="Rotulo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="MenuIdiomaExcecao" nillable="true" type="tns:MenuIdiomaExcecao" />
+</xs:schema>

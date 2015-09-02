@@ -1,0 +1,30 @@
+﻿@model PortalGalvaniMobile.Models.Portal
+    
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="shortcut icon" href="imgs/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon">
+    <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic' rel='stylesheet' type='text/css'>
+    <link href="@Url.Content("~/")assets/css/style.css" rel="stylesheet" />
+    <title></title>
+    <script type="text/javascript">
+        function base_url() {
+            return "/";
+        }
+    </script>
+</head>
+<body>
+    
+    @{Html.RenderPartial("_Header");}
+
+    <!--CONTEUDO-->
+    @RenderBody()
+    
+    @{Html.RenderPartial("_Footer");}
+
+</body>
+</html>

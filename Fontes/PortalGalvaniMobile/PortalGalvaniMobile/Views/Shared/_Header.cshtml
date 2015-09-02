@@ -1,0 +1,40 @@
+﻿@model PortalGalvaniMobile.Models.Portal
+<header>
+    <div class="logo">
+        <a href="index.html" title="Logo">
+            <img src="@Url.Content("~/")assets/imgs/Logo.png" />
+        </a>
+    </div>
+    <input type="checkbox" id="control-nav" />
+    <div class="control-bg">
+        <label for="control-nav" class="control-nav"></label>
+    </div>
+    <label for="control-nav" class="control-nav-close"></label>
+    <nav>
+        <ul>
+            @foreach (var m in Model.Menus)
+            {
+                var _target = "_self";
+                if (m.TargetId == 1) { _target = "_parent"; }
+                if (m.TargetId == 2) { _target = "_blank"; }
+
+                <li>
+                    <a href="@m.LinkURL" target="@_target" title="@m.Detalhe.Rotulo">@m.Detalhe.Rotulo</a>
+                </li>
+            }
+        </ul>
+    </nav>
+    <div class="idioma">
+        <ul>
+            <li>
+                <a href="@Url.Action("SessionCulture", "Home", new { lang = "en-US", ReturnUrl = Request.Url })" title="English"><img src="@Url.Content("~/")assets/imgs/Bd-eua.png" /></a>
+            </li>
+            <li>
+                <a href="@Url.Action("SessionCulture", "Home", new { lang = "es-ES", ReturnUrl = Request.Url })" title="Espanol"><img src="@Url.Content("~/")assets/imgs/Bd-esp.png" /></a>
+            </li>
+            <li>
+                <a href="@Url.Action("SessionCulture", "Home", new { lang = "pt-BR", ReturnUrl = Request.Url })" title="Portugues"><img src="@Url.Content("~/")assets/imgs/Bd-br.png" /></a>
+            </li>
+        </ul>
+    </div>
+</header>

@@ -1,0 +1,19 @@
+﻿@model PortalGalvaniMobile.Models.Portal
+<footer>
+    <div class="bg"></div>
+    <p>
+        @Resources.Footer.CentralAtendimento<br />
+        <a class="telefone" href="call:+@Model.Configuracao.ContatoTelefonePrincipal.Replace(" ","").Replace("-","").Replace("(","").Replace(")","")">@Model.Configuracao.ContatoTelefonePrincipal</a>
+    </p>
+    <p>
+        @Resources.Footer.HorarioAtendimento1
+        <br />
+        @Resources.Footer.HorarioAtendimento2
+    </p>
+    <p>
+        <img src="@Url.Content("~/")assets/imgs/Logo-rodape.png" title="Logo Galvani Engenharia" />
+    </p>
+    <p>
+        @Resources.Footer.Slogan1 &nbsp; @Resources.Footer.Slogan2
+    </p>
+</footer>

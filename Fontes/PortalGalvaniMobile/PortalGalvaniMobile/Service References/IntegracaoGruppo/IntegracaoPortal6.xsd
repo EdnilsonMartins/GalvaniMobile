@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DTO.Banner" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DTO.Banner" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Banner">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArquivoId_Primaria" type="xs:long" />
+      <xs:element minOccurs="0" name="ArquivoId_Secundaria" type="xs:long" />
+      <xs:element minOccurs="0" name="Ativo" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="BannerId" type="xs:int" />
+      <xs:element minOccurs="0" name="BannerTipoId" type="xs:int" />
+      <xs:element minOccurs="0" name="Complemento" nillable="true" type="tns:Banner.BannerComplemento" />
+      <xs:element minOccurs="0" name="Data" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DataValidade" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Detalhe" nillable="true" type="tns:BannerIdiomaExcecao" />
+      <xs:element minOccurs="0" name="LinkURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Posicao" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Referencia" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiteId" type="xs:int" />
+      <xs:element minOccurs="0" name="TargetId" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalClique" type="xs:int" />
+      <xs:element minOccurs="0" name="TotalVisualizacao" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Banner" nillable="true" type="tns:Banner" />
+  <xs:complexType name="Banner.BannerComplemento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BannerTipo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Liberado" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ListaUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListaUsuarioGrupo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Privado" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Banner.BannerComplemento" nillable="true" type="tns:Banner.BannerComplemento" />
+  <xs:complexType name="BannerIdiomaExcecao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BannerId" type="xs:int" />
+      <xs:element minOccurs="0" name="BannerIdiomaExcecaoId" type="xs:int" />
+      <xs:element minOccurs="0" name="Descricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdiomaId" type="xs:int" />
+      <xs:element minOccurs="0" name="Resumo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Titulo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BannerIdiomaExcecao" nillable="true" type="tns:BannerIdiomaExcecao" />
+</xs:schema>

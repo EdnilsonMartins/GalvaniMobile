@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://gruppowcf01.azurewebsites.net/IntegracaoPortal.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/DTO.Menu" />
+  <xs:import schemaLocation="http://gruppowcf01.azurewebsites.net/IntegracaoPortal.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/DTO.Arquivo" />
+  <xs:import schemaLocation="http://gruppowcf01.azurewebsites.net/IntegracaoPortal.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/DTO.Publicacao" />
+  <xs:import schemaLocation="http://gruppowcf01.azurewebsites.net/IntegracaoPortal.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/DTO.Configuracao" />
+  <xs:import schemaLocation="http://gruppowcf01.azurewebsites.net/IntegracaoPortal.svc?xsd=xsd6" namespace="http://schemas.datacontract.org/2004/07/DTO.Banner" />
+  <xs:element name="ListarMenu">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SiteId" type="xs:int" />
+        <xs:element minOccurs="0" name="MenuTipoId" type="xs:int" />
+        <xs:element minOccurs="0" name="IdiomaId" type="xs:int" />
+        <xs:element minOccurs="0" name="PublicacaoId" nillable="true" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarMenuResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/DTO.Menu" minOccurs="0" name="ListarMenuResult" nillable="true" type="q1:ListaMenuResponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarArquivos">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="OwnerId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="ArquivoCategoriaId" nillable="true" type="xs:int" />
+        <xs:element minOccurs="0" name="ArquivoCategoriaTipoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ListarArquivosResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/DTO.Arquivo" minOccurs="0" name="ListarArquivosResult" nillable="true" type="q2:ArrayOfArquivo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CarregarPublicacao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SiteId" type="xs:int" />
+        <xs:element minOccurs="0" name="PublicacaoId" type="xs:int" />
+        <xs:element minOccurs="0" name="IdiomaId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CarregarPublicacaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/DTO.Publicacao" minOccurs="0" name="CarregarPublicacaoResult" nillable="true" type="q3:Publicacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CarregarConfiguracao">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SiteId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CarregarConfiguracaoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/DTO.Configuracao" minOccurs="0" name="CarregarConfiguracaoResult" nillable="true" type="q4:Configuracao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CarregarTagSite">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SiteId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CarregarTagSiteResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="CarregarTagSiteResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CarregarBanner">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SiteId" type="xs:int" />
+        <xs:element minOccurs="0" name="PublicacaoId" type="xs:int" />
+        <xs:element minOccurs="0" name="BannetTipoId" type="xs:int" />
+        <xs:element minOccurs="0" name="IdiomaId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CarregarBannerResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/DTO.Banner" minOccurs="0" name="CarregarBannerResult" nillable="true" type="q5:Banner" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CarregarArquivo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="ArquivoId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CarregarArquivoResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/DTO.Arquivo" minOccurs="0" name="CarregarArquivoResult" nillable="true" type="q6:Arquivo" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CarregarHome">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="SiteId" type="xs:int" />
+        <xs:element minOccurs="0" name="IdiomaId" type="xs:int" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CarregarHomeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/DTO.Publicacao" minOccurs="0" name="CarregarHomeResult" nillable="true" type="q7:Publicacao" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

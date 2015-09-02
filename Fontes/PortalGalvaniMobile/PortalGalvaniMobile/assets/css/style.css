@@ -1,0 +1,490 @@
+﻿@charset "UTF-8";
+
+#control-nav:checked ~ .control-nav-close {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+#control-nav:checked ~ nav {
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+/********************************************************************************
+    *****************************************************************************
+    *****************************************************************************
+*/
+
+@media screen and (max-width: 900px) {
+}
+
+@media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 540px) {
+}
+
+header {
+    font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    color: #FFF;
+    min-height: 285px;
+    background: #FFF;
+}
+
+    header .logo {
+        float: left;
+        height: 115px;
+        padding: 55px 0 0 10%;
+    }
+
+    header .idioma {
+        clear: both;
+        background: #F8F8F8;
+    }
+
+        header .idioma ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 30px 0;
+            border: none;
+            text-align: center;
+        }
+
+            header .idioma ul li {
+                display: inline-block;
+                margin: 0 0 0 70px;
+                padding: 0;
+                border: none;
+                text-align: center;
+            }
+
+                header .idioma ul li:first-child {
+                    margin: 0;
+                }
+
+
+    header input {
+        display: none;
+    }
+
+    header .control-bg {
+        float: right;
+        margin: 55px 10% 0 0;
+        text-align: center;
+        padding: 16px 0px 0px 11px;
+        width: 41px;
+        height: 36px;
+        background-color: #165329;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+    }
+
+    header .control-nav {
+        display: block;
+        width: 30px;
+        padding: 5px 0;
+        border: solid #B9CBBF;
+        border-width: 3px 0;
+        cursor: pointer;
+    }
+
+        header .control-nav:before {
+            content: "";
+            display: block;
+            height: 3px;
+            background: #B9CBBF;
+        }
+
+    header .control-nav-close {
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        z-index: 1;
+        background: url(../imgs/Bt-menu-hover.png) no-repeat 6px 55px rgba(0,0,0,0.6);
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease;
+        -webkit-transform: translate(100%, 0);
+        -ms-transform: translate(100%, 0);
+        transform: translate(100%, 0);
+        cursor: pointer;
+    }
+
+    header nav {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 290px;
+        background: #125329;
+        overflow-x: auto;
+        z-index: 2;
+        -webkit-transition: all 500ms ease;
+        transition: all 500ms ease;
+        -webkit-transform: translate(100%, 0);
+        -ms-transform: translate(100%, 0);
+        transform: translate(100%, 0);
+    }
+
+        header nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            font-family: verdana;
+            font-size: 23px;
+            text-transform: uppercase;
+            color: #FFF;
+            text-decoration: none;
+            border: none;
+        }
+
+            header nav ul li {
+                height: 43px;
+                background-color: transparent;
+                border-top: solid 1px #4F7D60;
+                border-bottom: none;
+                border-left: none;
+                border-right: none;
+                padding: 18px 35px 0;
+            }
+
+                header nav ul li:first-child {
+                    border: none;
+                }
+
+                header nav ul li a {
+                    text-transform: uppercase;
+                    color: #FFF;
+                    text-decoration: none;
+                }
+
+/********************************************************************************
+    *****************************************************************************
+    *****************************************************************************
+*/
+
+body {
+    font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+}
+
+/********************************************************************************
+    *****************************************************************************
+    *****************************************************************************
+*/
+
+
+.banner {
+    min-height: 20px;
+}
+
+    .banner img {
+        width: 100%;
+        height: auto;
+    }
+
+    .banner .titulo {
+        position: relative;
+        height: 50px;
+        text-align: center;
+        font-size: 30px;
+        color: #FFF;
+        top: -30px;
+        margin: -53px 0 0 0;
+    }
+
+.menu_interno {
+    background: #EBEBEB;
+}
+
+    .menu_interno nav {
+    }
+
+        .menu_interno nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: #9F9F9F; /* #A7A129 */
+            background: #EBEBEB;
+            text-decoration: none;
+            border: none;
+        }
+
+            .menu_interno nav ul li {
+                height: auto;
+                background-color: transparent;
+                border: none;
+                padding: 20px 5px;
+                text-align: center;
+            }
+
+                .menu_interno nav ul li:hover a {
+                    text-decoration: underline;
+                    color: #A7A129; /* #9F9F9F */
+                }
+
+                .menu_interno nav ul li a {
+                    text-transform: uppercase;
+                    color: #9F9F9F;
+                    text-decoration: none;
+                }
+
+.conteudo {
+    background: #FFF;
+    padding: 10px 50px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+/********************************************************************************
+    *****************************************************************************
+    *****************************************************************************
+*/
+.contato {
+    clear: both;
+    background: url(../imgs/Bg-contato.jpg) no-repeat;
+}
+
+    .contato p {
+    }
+
+    .contato h1 {
+        font-size: 40px;
+        padding: 60px 70px 0px;
+        margin: 0 0 40px 0;
+        text-align: center;
+        color: #FFF;
+    }
+
+    .contato h2 {
+        font-size: 21px;
+        padding: 0px 70px 0px;
+        margin: 0 0 40px 0;
+        text-align: center;
+        color: #FFF;
+    }
+
+    .contato form {
+        margin: 0px 70px 29px;
+    }
+
+        .contato form input,
+        .contato form textarea {
+            font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
+            height: 35px;
+            line-height: 27px;
+            background-color: #fff;
+            color: #a9a9a9;
+            font-weight: 300;
+            text-transform: uppercase;
+            width: 90%;
+            padding: 0 15px;
+            border: none;
+            margin-bottom: 15px;
+        }
+
+        .contato form textarea {
+            height: 100px;
+            padding: 10px 15px;
+        }
+
+        .contato form select {
+            cursor: pointer;
+        }
+
+        .contato form .customSelect {
+            /* This is the default class that is used */
+            /* Put whatever custom styles you want here */
+            font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 14px;
+            height: 35px;
+            line-height: 49px;
+            background-color: #fff;
+            color: #a9a9a9;
+            font-weight: 300;
+            text-transform: uppercase;
+            width: 99.4%;
+            padding: 0 15px;
+            border: none;
+            margin-bottom: 15px;
+            background: url(../imgs/bgCustomSelect.png) 95% center no-repeat #ffffff;
+        }
+
+        .contato form input[type="submit"]#btnEnviar.yellowButton {
+            border: none;
+            display: inline-block;
+            height: 50px;
+            width: 99.4%;
+            line-height: 36px;
+            font-size: 18px;
+            font-size: 1.12rem;
+            font-weight: 800;
+            color: #fff;
+            text-transform: uppercase;
+            background-color: #d2c72b;
+            margin: 10px 0 0 0;
+        }
+
+    .contato .informacoes {
+        background: #306038;
+        padding: 30px 70px 50px;
+    }
+
+        .contato .informacoes .endereco {
+            text-align: center;
+            font-size: 16px;
+            color: #FFF;
+        }
+
+        .contato .informacoes .telefone {
+            margin: 30px 0 0 0;
+            text-align: center;
+            font-size: 16px;
+            color: #FFF;
+        }
+
+            .contato .informacoes .telefone a {
+                font-size: 16px;
+                text-decoration: none;
+                color: #FFF;
+            }
+
+
+        .contato .informacoes .botoes {
+            margin: 30px 0 0 0;
+            text-align: center;
+            font-size: 16px;
+            color: #FFF;
+        }
+
+            .contato .informacoes .botoes input {
+                border: 1px solid #98af9b;
+                display: inline-block;
+                height: 50px;
+                width: 99.4%;
+                line-height: 36px;
+                font-size: 18px;
+                font-size: 1.12rem;
+                font-weight: 800;
+                color: #fff;
+                text-transform: uppercase;
+                background-color: #306038;
+                margin: 10px 0 0 0;
+                cursor: pointer;
+            }
+
+    .contato .mapa {
+    }
+
+    .contato .trabalhe {
+        background: #FFF;
+        padding: 50px;
+        text-align: center;
+    }
+
+        .contato .trabalhe h1 {
+            font-size: 40px;
+            font-weight: normal;
+            color: #000; /*preto*/
+            text-transform: uppercase;
+            margin: 0;
+            padding: 0;
+        }
+
+            .contato .trabalhe h1 .gold {
+                color: #aaa226;
+            }
+
+        .contato .trabalhe h2 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #000; /*preto*/
+            margin: 0;
+            padding: 0;
+        }
+
+        .contato .trabalhe p {
+        }
+
+        .contato .trabalhe form {
+            margin: 35px 0 0 0;
+        }
+
+            .contato .trabalhe form input,
+            .contato .trabalhe form textarea {
+                font-family: 'Lato', Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 14px;
+                height: 35px;
+                line-height: 27px;
+                background-color: #e9e9e9;
+                color: #818181;
+                font-weight: 300;
+                text-transform: uppercase;
+                width: 90%;
+                padding: 0 15px;
+                border: none;
+                margin-bottom: 15px;
+            }
+
+            .contato .trabalhe form textarea {
+                height: 100px;
+                padding: 10px 15px;
+            }
+
+            .contato .trabalhe form input[type="submit"]#btnEnviar.yellowButton {
+                border: none;
+                display: inline-block;
+                height: 50px;
+                width: 99.4%;
+                line-height: 36px;
+                font-size: 18px;
+                font-size: 1.12rem;
+                font-weight: 800;
+                color: #fff;
+                text-transform: uppercase;
+                background-color: #d2c72b;
+                margin: 10px 0 0 0;
+            }
+
+/********************************************************************************
+    *****************************************************************************
+    *****************************************************************************
+*/
+
+footer {
+    min-height: 250px;
+    padding: 55px 30px;
+    text-align: center;
+    background: #125329;
+    text-transform: uppercase;
+    color: #FFF;
+    margin-top: 20px;
+}
+
+    footer .bg {
+        background: url(../imgs/bgTopoRodape.png) repeat-x top;
+        height: 52px;
+        margin: -70px -30px 0 -30px;
+    }
+
+    footer p {
+        margin: 0 0 30px 0;
+    }
+
+        footer p a.telefone {
+            text-decoration: none;
+            color: #FFF;
+            font-size: 20px;
+        }

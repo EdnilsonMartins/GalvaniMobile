@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/DTO.Publicacao" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/DTO.Publicacao" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="Publicacao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AprovacaoHistorico" nillable="true" type="tns:ArrayOfPublicacao.PublicacaoHistoricoItem" />
+      <xs:element minOccurs="0" name="ArquivoDestaqueId" type="xs:long" />
+      <xs:element minOccurs="0" name="Ativo" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Complemento" nillable="true" type="tns:Publicacao.PublicacaoComplemento" />
+      <xs:element minOccurs="0" name="Conteudo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Data" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DataAprovacao" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DataValidade" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Destaque" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Detalhe" nillable="true" type="tns:PublicacaoIdiomaExcecao" />
+      <xs:element minOccurs="0" name="EditoriaId" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="Fonte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Posicao" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="PublicacaoId" type="xs:int" />
+      <xs:element minOccurs="0" name="PublicacaoTipoId" type="xs:int" />
+      <xs:element minOccurs="0" name="Resumo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SiteId" type="xs:int" />
+      <xs:element minOccurs="0" name="Tags" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Titulo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioElegivel" nillable="true" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Publicacao" nillable="true" type="tns:Publicacao" />
+  <xs:complexType name="ArrayOfPublicacao.PublicacaoHistoricoItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Publicacao.PublicacaoHistoricoItem" nillable="true" type="tns:Publicacao.PublicacaoHistoricoItem" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfPublicacao.PublicacaoHistoricoItem" nillable="true" type="tns:ArrayOfPublicacao.PublicacaoHistoricoItem" />
+  <xs:complexType name="Publicacao.PublicacaoHistoricoItem">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataLiberacao" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Descricao" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hora" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Liberado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NomeUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UsuarioId" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Publicacao.PublicacaoHistoricoItem" nillable="true" type="tns:Publicacao.PublicacaoHistoricoItem" />
+  <xs:complexType name="Publicacao.PublicacaoComplemento">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Data" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DataLiberado" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Editoria" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Hora" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Liberado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ListaUsuario" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ListaUsuarioGrupo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Privado" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PublicacaoTipo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Publicacao.PublicacaoComplemento" nillable="true" type="tns:Publicacao.PublicacaoComplemento" />
+  <xs:complexType name="PublicacaoIdiomaExcecao">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ArquivoDestaqueId" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="Conteudo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Editora" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Fonte" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IdiomaId" type="xs:int" />
+      <xs:element minOccurs="0" name="PublicacaoId" type="xs:int" />
+      <xs:element minOccurs="0" name="PublicacaoIdiomaExcecaoId" type="xs:int" />
+      <xs:element minOccurs="0" name="Resumo" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Tags" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Titulo" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="PublicacaoIdiomaExcecao" nillable="true" type="tns:PublicacaoIdiomaExcecao" />
+</xs:schema>

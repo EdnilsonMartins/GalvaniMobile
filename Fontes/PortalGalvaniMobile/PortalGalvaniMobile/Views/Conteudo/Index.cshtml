@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model PortalGalvaniMobile.Models.Portal
+@{
+    string fundo = "";
+    if (Model.BannerSuperiorInterna != null && Model.BannerSuperiorInterna.ArquivoId_Primaria != 0)
+    {
+        fundo = "http://gruppo01.azurewebsites.net/File?id=" + Model.BannerSuperiorInterna.ArquivoId_Primaria;
+        fundo = string.Format("{0}", fundo);
+    }
+}
+@if (Model.Conteudo != null)
+{
+    <div class="banner">
+        <img src="@fundo" title="Banner" />
+        <div class="titulo">@Model.Conteudo.Detalhe.Titulo</div>
+    </div>
+}
+
+@if (Model.SubMenus != null && Model.SubMenus.Count > 0)
+{
+    <link href="/assets/css/quem-somos.css" rel="stylesheet" />
+    <div class="menu_interno">
+        <nav>
+            <ul class="center">
+                @foreach (var m in Model.SubMenus)
+                {
+                    var menuAtivo = "";
+                    if (Model.Conteudo != null && Model.Conteudo.PublicacaoId == m.PublicacaoId)
+                    {
+                        menuAtivo = "menuAtivo";
+                    }
+
+                    var _target = "_self";
+                    if (m.TargetId == 1) { _target = "_parent"; }
+                    if (m.TargetId == 2) { _target = "_blank"; }
+
+                    <li><a class="menu_a @menuAtivo" href="@m.LinkURL" target="@_target" id="menuQuemSomos" title="@m.Detalhe.Rotulo.ToUpper()">@m.Detalhe.Rotulo.ToUpper()</a></li>
+                }
+            </ul>
+        </nav>
+    </div>
+
+    <div class="conteudo">
+        <p>
+            @Html.Raw(Model.Conteudo.Detalhe.Conteudo)
+        </p>
+    </div>
+}
