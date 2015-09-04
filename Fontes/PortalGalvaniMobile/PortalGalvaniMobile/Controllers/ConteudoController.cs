@@ -21,14 +21,14 @@ namespace PortalGalvaniMobile.Controllers
             int PublicacaoId = Id ?? 0;
 
             IntegracaoGruppo.IntegracaoPortalClient IG = new IntegracaoGruppo.IntegracaoPortalClient();
-            var publicacao = IG.CarregarPublicacao(1, PublicacaoId, idiomaId);
+            var publicacao = IG.CarregarPublicacao(Util.SiteId, PublicacaoId, idiomaId);
 
             if (publicacao.PublicacaoId != 0)
             {
                 model.Conteudo = publicacao;
             }
 
-            var bannerSuperiorInterna = IG.CarregarBanner(1, PublicacaoId, 7, idiomaId);
+            var bannerSuperiorInterna = IG.CarregarBanner(Util.SiteId, PublicacaoId, 7, idiomaId);
             if (bannerSuperiorInterna.ArquivoId_Primaria != 0)
             {
                 model.BannerSuperiorInterna = bannerSuperiorInterna;
@@ -43,7 +43,7 @@ namespace PortalGalvaniMobile.Controllers
             }
 
 
-            model.SubMenus = IG.ListarMenu(1, 1, idiomaId, Id).Menus.ToList();
+            model.SubMenus = IG.ListarMenu(Util.SiteId, 1, idiomaId, Id).Menus.ToList();
 
 
             ViewBag.PublicacaoId = Id;

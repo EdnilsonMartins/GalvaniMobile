@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PortalGalvaniMobile.Models;
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
@@ -21,6 +22,9 @@ namespace PortalGalvaniMobile
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            if (System.Configuration.ConfigurationManager.AppSettings["SiteId"] != null)
+                Util.SiteId = Int32.Parse(System.Configuration.ConfigurationManager.AppSettings["SiteId"]);
         }
 
         protected void Application_AcquireRequestState(object sender, EventArgs e)

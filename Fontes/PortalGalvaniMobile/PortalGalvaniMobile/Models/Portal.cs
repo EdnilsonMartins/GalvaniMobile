@@ -27,10 +27,10 @@ namespace PortalGalvaniMobile.Models
         {
 
             IntegracaoGruppo.IntegracaoPortalClient IG = new IntegracaoGruppo.IntegracaoPortalClient();
-            Menus = IG.ListarMenu(1, 1, idiomaId, null).Menus.ToList();
+            Menus = IG.ListarMenu(Util.SiteId, 1, idiomaId, null).Menus.ToList();
 
-            TagsSite = IG.CarregarTagSite(1);
-            Configuracao = IG.CarregarConfiguracao(1);
+            TagsSite = IG.CarregarTagSite(Util.SiteId);
+            Configuracao = IG.CarregarConfiguracao(Util.SiteId);
             
         }
 

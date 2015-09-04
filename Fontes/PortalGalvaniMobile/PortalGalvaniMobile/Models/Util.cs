@@ -14,5 +14,7 @@ namespace PortalGalvaniMobile.Models
             ENGLISH = 3,
             FRANCES = 4
         }
+
+        public static int SiteId;
     }
 }

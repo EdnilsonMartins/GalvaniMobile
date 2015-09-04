@@ -19,7 +19,7 @@ namespace PortalGalvaniMobile.Controllers
             Portal model = new Portal(idiomaId);
 
             IntegracaoGruppo.IntegracaoPortalClient IG = new IntegracaoGruppo.IntegracaoPortalClient();
-            var publicacao = IG.CarregarHome(1, idiomaId);
+            var publicacao = IG.CarregarHome(Util.SiteId, idiomaId);
             if (publicacao.PublicacaoId != 0)
             {
                 model.Conteudo = publicacao;
