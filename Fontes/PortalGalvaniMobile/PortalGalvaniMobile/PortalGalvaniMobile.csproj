@@ -181,6 +181,7 @@
     <Content Include="assets\util\imgs\Ico-localizacao.png" />
     <Content Include="assets\util\imgs\Logo-rodape.png" />
     <Content Include="assets\util\imgs\Logo.png" />
+    <None Include="Properties\PublishProfiles\GalvaniMobile.pubxml" />
     <None Include="Service References\IntegracaoGruppo\IntegracaoPortal.disco" />
     <None Include="Service References\IntegracaoGruppo\configuration91.svcinfo" />
     <None Include="Service References\IntegracaoGruppo\configuration.svcinfo" />
