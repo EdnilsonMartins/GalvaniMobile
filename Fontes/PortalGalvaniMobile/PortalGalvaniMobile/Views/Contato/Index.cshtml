@@ -1,0 +1,86 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="contato">
+
+    <h1>@Resources.Contato.ContatoTexto1</h1>
+    <h2>@Resources.Contato.ContatoTexto3</h2>
+
+    @using (Html.BeginForm("Index", "Contato", new { }, FormMethod.Post))
+{
+    <input type="text" name="nome" id="nome" placeholder="@Resources.Contato.ContatoPlaceNome">
+    <input type="email" name="email" id="email" placeholder="@Resources.Contato.ContatoPlaceEmail">
+    <input type="tel" name="telefone" id="telefone" placeholder="@Resources.Contato.ContatoPlaceTelefone">
+    
+        <select name="assunto" id="assunto" class="customSelect">
+            <option value="Assunto">@Resources.Contato.ContatoPlaceAssunto</option>
+            <option value="Brita">@Resources.Contato.ContatoPlaceBrita</option>
+            <option value="Obras">@Resources.Contato.ContatoPlaceObras</option>
+            <option value="Loteamentos">@Resources.Contato.ContatoPlaceLoteamentos</option>
+            <option value="Asfalto">@Resources.Contato.ContatoPlaceAsfalto</option>
+        </select>
+    
+    <input type="text" name="areaAproximada" id="areaAproximada" placeholder="@Resources.Contato.ContatoPlaceAreaAproximada">
+    <input type="text" name="cidade" id="cidade" placeholder="@Resources.Contato.ContatoPlaceCidade">
+    <textarea name="mensagem" id="mensagem" placeholder="@Resources.Contato.CurriculoMensagem"></textarea>
+
+            <input type="submit" name="btnEnviar" id="btnEnviar" class="yellowButton" value="@Resources.Contato.CurriculoEnviar">
+
+    if (!String.IsNullOrEmpty(Model.NrProtocoloContato))
+        {
+            <h2 style="font-size: 16px; margin-top: 6px;">@Resources.Contato.ContatoTexto5</h2>
+        }
+    }
+    <div class="informacoes">
+        <div class="endereco">
+            <img src="@Url.Content("~/")assets/imgs/Ico-contato.png" title="Central de Atendimento" /><br />
+            Estrada Municipal da Fazenda São Bento, Km 02 Paulínia / SP - Cep 13140-000
+        </div>
+        <div class="telefone">
+            <img src="@Url.Content("~/")assets/imgs/Ico-localizacao.png" title="Central de Atendimento" /><br />
+            @Resources.Contato.ContatoTelefone:<br />
+            (19) 3844-9908
+        </div>
+        <div class="botoes">
+            <a href="https://www.google.com.br/maps/place/Galvani+Engenharia+e+Com%C3%A9rcio+Ltda/-22.768336,-47.167525,17z/data=!3m1!4b1!4m2!3m1!1s0x94c8957c8414817b:0x105ec9fbfd694b76">
+                <input type="button" value="@Resources.Contato.ContatoComoChegar">
+            </a>
+        </div>
+        <div class="botoes">
+            <input type="button" value="@Resources.Contato.ContatoTrabalheConosco" />
+        </div>
+    </div>
+    <div class="mapa">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3678.9280251412506!2d-47.167951599999995!3d-22.7680522!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c8957c8414817b%3A0x105ec9fbfd694b76!2sGalvani+Engenharia!5e0!3m2!1spt-BR!2sbr!4v1440642407411" frameborder="0" style="border:0; width: 100%; height: 300px;" allowfullscreen></iframe>
+    </div>
+    <div class="trabalhe">
+        <h1>@Resources.Contato.Trabalhe<br /><span class="gold">@Resources.Contato.Conosco</span></h1>
+        <p>
+            @Resources.Contato.ConteudoTexto1;
+
+            @Resources.Contato.ConteudoTexto2;
+        </p>
+        <p>
+            <strong style="font-size: 16px;">
+                @Resources.Contato.ConteudoSubTexto1
+                <br />@Resources.Contato.ConteudoSubTexto2
+                <span>@Resources.Contato.ConteudoSubTexto3</span>
+            </strong>
+        </p>
+        @using (Html.BeginForm("Index", "Contato", new { }, FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <input type="text" name="nome" id="nome" placeholder="@Resources.Contato.CurriculoNome">
+            <input type="email" name="email" id="email" placeholder="@Resources.Contato.CurriculoEmail">
+            <input type="tel" name="telefone" id="telefone" placeholder="@Resources.Contato.CurriculoTelefone">
+            <div class="customFileInput">
+                <div class="inputFileMask" style="float: left; margin-left: 48px;">@Resources.Contato.CurriculoEnviarCurriculo</div>
+                <input type="file" name="arquivo" id="arquivo" />
+            </div>
+            <textarea name="mensagem" id="mensagem" placeholder="@Resources.Contato.CurriculoMensagem"></textarea>
+            <input type="submit" name="btnEnviarCurriculum" id="btnEnviarCurriculum" class="yellowButton" value="@Resources.Contato.CurriculoEnviar">
+        }
+    </div>
+</div>
+

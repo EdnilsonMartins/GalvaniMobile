@@ -34,10 +34,11 @@ header {
     background: #FFF;
 }
 
+
     header .logo {
         float: left;
         height: 115px;
-        padding: 55px 0 0 10%;
+        padding: 55px 0 0 2%;
     }
 
     header .idioma {
@@ -55,7 +56,7 @@ header {
 
             header .idioma ul li {
                 display: inline-block;
-                margin: 0 0 0 70px;
+                margin: 0 0 0 10%;
                 padding: 0;
                 border: none;
                 text-align: center;
@@ -72,7 +73,7 @@ header {
 
     header .control-bg {
         float: right;
-        margin: 55px 10% 0 0;
+        margin: 55px 2% 0 0;
         text-align: center;
         padding: 16px 0px 0px 11px;
         width: 41px;
@@ -117,19 +118,36 @@ header {
     }
 
     header nav {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 290px;
-        background: #125329;
-        overflow-x: auto;
-        z-index: 2;
-        -webkit-transition: all 500ms ease;
-        transition: all 500ms ease;
-        -webkit-transform: translate(100%, 0);
-        -ms-transform: translate(100%, 0);
-        transform: translate(100%, 0);
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 290px;
+            background: #125329;
+            overflow-x: auto;
+            z-index: 2;
+            -webkit-transition: all 500ms ease;
+            transition: all 500ms ease;
+            -webkit-transform: translate(100%, 0);
+            -ms-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+        }
+    @media (max-width: 380px) {
+        header nav {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 222px;
+            background: #125329;
+            overflow-x: auto;
+            z-index: 2;
+            -webkit-transition: all 500ms ease;
+            transition: all 500ms ease;
+            -webkit-transform: translate(100%, 0);
+            -ms-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+        }
     }
 
         header nav ul {
@@ -143,6 +161,21 @@ header {
             text-decoration: none;
             border: none;
         }
+
+        @media (max-width: 380px) {
+            header nav ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                font-family: verdana;
+                font-size: 18px;
+                text-transform: uppercase;
+                color: #FFF;
+                text-decoration: none;
+                border: none;
+            }
+        }
+        
 
             header nav ul li {
                 height: 43px;
@@ -188,6 +221,7 @@ body {
 
     .banner img {
         width: 100%;
+        min-height: 100px;
         height: auto;
     }
 
@@ -198,7 +232,7 @@ body {
         font-size: 30px;
         color: #FFF;
         top: -30px;
-        margin: -53px 0 0 0;
+        margin: -52px 0 0 0;
     }
 
 .menu_interno {
@@ -229,7 +263,8 @@ body {
             }
 
                 .menu_interno nav ul li:hover a {
-                    text-decoration: underline;
+                    /*text-decoration: underline;*/
+                    /*border-bottom: 10px solid #ABA000;*/
                     color: #A7A129; /* #9F9F9F */
                 }
 
@@ -237,6 +272,11 @@ body {
                     text-transform: uppercase;
                     color: #9F9F9F;
                     text-decoration: none;
+                }
+
+                .menuAtivo{
+                    color: #A7A129 !important;
+                    border-bottom: 10px solid #A7A129;
                 }
 
 .conteudo {
@@ -488,3 +528,9 @@ footer {
             color: #FFF;
             font-size: 20px;
         }
+
+
+
+
+
+

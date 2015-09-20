@@ -114,6 +114,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_GlobalResources\Contato.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contato.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Contato.en-US.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contato.en-US.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Contato.es-ES.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Contato.es-ES.resx</DependentUpon>
+    </Compile>
     <Compile Include="App_GlobalResources\Footer.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -149,6 +164,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Content Include="assets\css\style.css" />
+    <Content Include="assets\imgs\Desenvolvimento.jpg" />
     <Content Include="Global.asax" />
     <Content Include="assets\imgs\Banner.jpg" />
     <Content Include="assets\imgs\Bd-br.png" />
@@ -235,6 +251,7 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Views\Conteudo\Index.cshtml" />
+    <Content Include="Views\Contato\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -279,6 +296,24 @@
     <Content Include="App_GlobalResources\Footer.es-ES.resx">
       <Generator>GlobalResourceProxyGenerator</Generator>
       <LastGenOutput>Footer.es-ES.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Contato.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Contato.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Contato.en-US.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Contato.en-US.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Contato.es-ES.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Contato.es-ES.designer.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <PropertyGroup>
